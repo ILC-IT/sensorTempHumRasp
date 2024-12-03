@@ -1,0 +1,6 @@
+node_modules/
+.env
+rasp
+.vscode/
+Adafruit_Python_DHT/
+sensor-test.py

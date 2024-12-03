@@ -1,0 +1,36 @@
+{
+	"pi": {
+		"name": "Server DHT22",
+		"description": "Server for dht22",
+		"port": 8485,
+		"frequency": 600000,
+		"sensors": {
+			"temperature": {
+				"name": "Temperature Sensor",
+				"description": "A temperature sensor",
+				"unit": "celsius",
+				"value": 0,
+				"gpio": 12,
+				"type": 22
+			},
+			"humidity": {
+				"name": "Humidity Sensor",
+				"description": "A humidity sensor",
+				"unit": "%",
+				"value": 0,
+				"gpio": 12,
+				"type": 22
+			},
+			"dht22": {
+				"name": "Temperature + Humidity Sensor",
+				"description": "dht22",
+				"unit": "celsius + %",
+				"valueTemp": 0,
+				"valueHum": 0,
+				"gpio": 12,
+				"type": 22
+			}
+		}
+	}
+}
+
