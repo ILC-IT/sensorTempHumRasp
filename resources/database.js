@@ -6,6 +6,9 @@ const Influx = require('influx');
 const influx_database = new Influx.InfluxDB({
   host: 'localhost',
   database: rp.database_name,
+  // port: rp.port,
+  // username: rp.user, //uncomment if createUser is true
+  // password: rp.password, //uncomment if createUser is true
   schema: [{
       measurement: rp.measurement,
       fields: {

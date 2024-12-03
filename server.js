@@ -24,6 +24,17 @@ influx
               })
               .then(() =>{
                 console.log('New retention policy created: %s on database: %s', rp.name, rp.database_name);
+                if (rp.createUser){
+                  return influx
+                    .createUser(rp.user, rp.password, rp.isAdmin)
+                    .then(() => {
+                      console.log('New user/password created on database: %s', rp.database_name);
+                    })
+                    .catch((err) =>{
+                      console.error('Error creating user/password on database %s: %s', rp.database_name, err);
+                      throw err; // Repropaga el error para el manejo global
+                    });
+                }
               })
               .catch((err) => {
                 console.error('Error creating retention policy on database %s: %s', rp.database_name, err);

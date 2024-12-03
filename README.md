@@ -19,7 +19,7 @@
   - Configure the `database` and `schema` to use.
 
 - Resources --> databaseRP.js:
-  - Configure the `database name`, the `measurement`, and the `retention policy` options.
+  - Configure the `database name`, the `measurement`, `user - password` and the `retention policy` options.
   
 # Install
 - npm install
